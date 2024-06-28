@@ -1,0 +1,17 @@
+{
+  "name": "k6-complete-test",
+  "version": "1.0.0",
+  "description": "Teste de carga com K6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"start program\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "k6": "^0.0.0"
+  },
+  "devDependencies": {}
+}
