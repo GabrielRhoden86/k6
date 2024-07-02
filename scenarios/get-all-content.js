@@ -10,9 +10,9 @@ export let getContentSuccessRate = new Rate('get_content_success_rate');
 
 export default function(){
 
-        let response = http.get('https://dev.crcpr.org.br/ti/querieSave')
-        //let response = http.get('http://127.0.0.1:8000/api/students/3')
+    let response = http.get('http://127.0.0.1:8000/api/students-get');
                                                         
+                                                        //exemplos de output com: k6 run index.js --vus 2 --duration 15s    2 x 15
     getContentDuration.add(response.timings.duration); //avg=421.198765 min=105.9246 med=139.4845 max=2841.6816 p(90)=1527.30486 p(95)=2183.57208
     getContentRequests.add(1);                         //97      5.374806/s
     getContentFailRate.add(response.status == 0 || response.status > 399);    //38.14% 
@@ -25,5 +25,6 @@ export default function(){
     })){
         fail(dutationMsg)
     }
+
     sleep(1);
 }
